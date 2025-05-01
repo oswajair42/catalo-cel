@@ -9,14 +9,14 @@ const ProductList = ({
   onToggleExpand
 }) => {
   return (
-    {/* Lista contenedora de nombres de productos */}
+    // Lista contenedora de nombres de productos
     <ul className="product-name-list">
       {/* Mapeo de cada producto en la lista */}
       {products.map(product => (
-        {/* Elemento de lista para cada producto */}
+        // Elemento de lista para cada producto
         <li 
           key={product.id}
-          {/* Clase condicional para el producto seleccionado */}
+          // Clase condicional para el producto seleccionado
           className={`product-name-item ${selectedProduct?.id === product.id ? 'selected' : ''}`}
         >
           {/* Span clickable para seleccionar el producto */}
