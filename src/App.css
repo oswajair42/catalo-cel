@@ -1,118 +1,199 @@
-/* Estilos globales */
-* {
-  box-sizing: border-box;
+/* Estilos generales */
+body {
+  font-family: 'Arial', sans-serif;
   margin: 0;
   padding: 0;
+  background-color: #f5f5f5;
+  color: #333;
 }
 
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 1.6;
-  color: #333;
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Encabezado con diseño bonito */
+.app-header {
+  background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+  color: white;
+  padding: 2rem;
+  text-align: center;
+  border-radius: 0 0 8px 8px;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.app-header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.tagline {
+  font-style: italic;
+  font-size: 1.2rem;
+  opacity: 0.9;
+  margin-top: 0.5rem;
+}
+
+/* Contenido principal */
+.main-content {
+  display: flex;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  gap: 2rem;
+  padding: 0 1rem;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 300px;
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.add-product-btn {
+  background: #1a2a6c;
+  color: white;
+  border: none;
+  padding: 0.8rem 1rem;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
+}
+
+.add-product-btn:hover {
+  background: #0d1a4a;
+  transform: translateY(-2px);
+}
+
+.form-container {
+  margin-bottom: 1.5rem;
+}
+
+/* Lista de productos */
+.product-name-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.product-name-item {
+  padding: 0.8rem 1rem;
+  border-bottom: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background-color 0.2s;
+}
+
+.product-name-item:hover {
   background-color: #f9f9f9;
 }
 
-.app {
-  min-height: 100vh;
+.product-name-item.selected {
+  background-color: #e3f2fd;
+  font-weight: bold;
 }
 
-a {
-  color: #3498db;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-}
-
-button {
+.product-name-item span {
   cursor: pointer;
+  flex-grow: 1;
 }
 
-/* Estilos para contenedores */
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-}
-
-/* Estilos para títulos */
-h1, h2, h3, h4, h5, h6 {
-  margin-bottom: 15px;
-  color: #2c3e50;
-}
-
-/* Estilos para párrafos */
-p {
-  margin-bottom: 15px;
-}
-
-/* Estilos para botones */
-.btn {
-  display: inline-block;
-  background-color: #3498db;
+/* Botón Eliminar */
+.delete-product-btn {
+  background: #ff4444;
   color: white;
-  padding: 10px 20px;
   border: none;
+  padding: 0.4rem 0.8rem;
   border-radius: 4px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background-color 0.2s;
 }
 
-.btn:hover {
-  background-color: #2980b9;
+.delete-product-btn:hover {
+  background: #cc0000;
 }
 
-/* Estilos para formularios */
-input, textarea, select {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 15px;
+/* Área de visualización */
+.product-display {
+  flex: 1;
+  background: white;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.no-products-message {
+  text-align: center;
+  color: #666;
+}
+
+/* Imágenes */
+.product-image-preview {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.product-image-preview img {
+  max-width: 150px;
+  max-height: 150px;
   border: 1px solid #ddd;
   border-radius: 4px;
-  font-size: 16px;
+  transition: all 0.3s ease;
 }
 
-input:focus, textarea:focus, select:focus {
-  outline: none;
-  border-color: #3498db;
+.product-image-preview.expanded img {
+  max-width: 300px;
+  max-height: 300px;
 }
 
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+/* Botón Leer más/menos */
+.read-more-btn {
+  background: #1a2a6c;
   color: white;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  border-radius: 4px;
+  cursor: pointer;
+  margin: 1rem 0;
+  transition: all 0.3s ease;
 }
 
-.App-link {
-  color: #61dafb;
+.read-more-btn:hover {
+  background: #0d1a4a;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Especificaciones */
+.product-specs {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: #f9f9f9;
+  border-radius: 4px;
+}
+
+.product-specs p {
+  margin-bottom: 0.8rem;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .main-content {
+    flex-direction: column;
   }
-  to {
-    transform: rotate(360deg);
+  
+  .sidebar {
+    width: 100%;
+    margin-bottom: 1.5rem;
   }
 }

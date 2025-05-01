@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "name": "iPhone 15 Pro",
+    "price": 24999,
+    "category": "Apple",
+    "description": "Pantalla Super Retina XDR de 6.1\", chip A17 Pro, 128GB almacenamiento, cámara triple de 48MP",
+    "image": "https://i.imgur.com/iphone15.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Samsung Galaxy S23 Ultra",
+    "price": 22999,
+    "category": "Samsung",
+    "description": "Pantalla Dynamic AMOLED 2X de 6.8\", Snapdragon 8 Gen 2, 256GB, cámara de 200MP",
+    "image": "https://i.imgur.com/s23ultra.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Xiaomi 13 Pro",
+    "price": 17999,
+    "category": "Xiaomi",
+    "description": "Pantalla AMOLED de 6.73\", Snapdragon 8 Gen 2, 256GB, cámara triple de 50MP",
+    "image": "https://i.imgur.com/xiaomi13.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Motorola Edge 40",
+    "price": 12999,
+    "category": "Motorola",
+    "description": "Pantalla pOLED de 6.55\", MediaTek Dimensity 8020, 256GB, cámara dual de 50MP",
+    "image": "https://i.imgur.com/motoedge40.jpg"
+  }
+]

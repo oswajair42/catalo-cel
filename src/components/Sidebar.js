@@ -1,23 +1,17 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
 import './Sidebar.css';
 
-const Sidebar = ({ pages }) => {
+const Sidebar = () => {
   return (
-    <div className="sidebar">
-      <h2>Tabla de Contenidos</h2>
+    <aside className="sidebar">
+      <h2>Categorías</h2>
       <ul>
-        {pages.map(page => (
-          <li key={page.id}>
-            <Link to={`/page/${page.id}`}>{page.title}</Link>
-          </li>
-        ))}
+        <li>Apple</li>
+        <li>Samsung</li>
+        <li>Xiaomi</li>
+        <li>Otras</li>
       </ul>
-      <div className="sidebar-footer">
-        <Link to="/create" className="create-button">Crear Nueva Página</Link>
-      </div>
-    </div>
+    </aside>
   );
 };
 
-export default Sidebar; 
+export default Sidebar;

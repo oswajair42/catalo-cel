@@ -3,14 +3,9 @@ import './Layout.css';
 
 const Layout = ({ children }) => {
   return (
-    {/* Contenedor principal del layout */}
     <div className="layout">
-      {/* Componente Sidebar - Barra lateral de navegación */}
       <Sidebar />
-      
-      {/* Contenido principal de la aplicación */}
       <main className="main-content">
-        {/* Children - Contenido dinámico que se inyectará */}
         {children}
       </main>
     </div>

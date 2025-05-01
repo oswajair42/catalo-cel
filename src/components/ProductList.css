@@ -1,0 +1,278 @@
+/* Estilos generales */
+.catalog-container {
+  display: flex;
+  height: calc(100vh - 120px);
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+/* Lista de productos */
+.product-list {
+  width: 300px;
+  border-right: 1px solid #e1e1e1;
+  overflow-y: auto;
+  background: #f8f8f8;
+}
+
+.list-title {
+  padding: 15px;
+  margin: 0;
+  background: #fff;
+  border-bottom: 1px solid #e1e1e1;
+  color: #333;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.product-list ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.product-item {
+  padding: 12px 15px;
+  border-bottom: 1px solid #e1e1e1;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  transition: all 0.2s;
+}
+
+.product-item:hover {
+  background: #f0f7ff;
+}
+
+.product-item.selected {
+  background: #e3f2fd;
+  border-left: 3px solid #3483fa;
+}
+
+.product-summary {
+  flex: 1;
+  min-width: 0;
+}
+
+.product-name {
+  display: block;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: #333;
+}
+
+.product-price {
+  font-size: 0.9rem;
+  color: #00a650;
+  font-weight: bold;
+}
+
+.delete-btn {
+  background: none;
+  border: none;
+  color: #ff4444;
+  font-size: 1.2rem;
+  cursor: pointer;
+  margin-left: 10px;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.delete-btn:hover {
+  background: #ffebee;
+}
+
+/* Detalles del producto */
+.product-details {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+.detail-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  gap: 10px;
+}
+
+.detail-header h2 {
+  margin: 0;
+  color: #333;
+}
+
+.category-badge {
+  background: #e3f2fd;
+  color: #1976d2;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+}
+
+.image-container {
+  max-width: 400px;
+  margin: 0 auto 20px;
+  text-align: center;
+}
+
+.image-container img {
+  max-width: 100%;
+  max-height: 300px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.price-section {
+  margin-bottom: 20px;
+}
+
+.price {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #333;
+  margin-right: 15px;
+}
+
+.shipping {
+  background: #00a650;
+  color: white;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.description-section h4 {
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.description-section p {
+  color: #333;
+  line-height: 1.6;
+}
+
+.delete-product-btn {
+  margin-top: 20px;
+  background: #ff4444;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.delete-product-btn:hover {
+  background: #cc0000;
+}
+
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: #666;
+}
+
+.empty-state i {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  color: #3483fa;
+}
+
+/* Iconos */
+.icon-phone:before { content: "📱"; }
+.icon-info:before { content: "ℹ️"; }
+.icon-loading {
+  display: inline-block;
+  animation: spin 1s linear infinite;
+}
+
+/* Estilos para la lista de nombres */
+.product-name-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.product-name-item {
+  padding: 12px 15px;
+  border-bottom: 1px solid #eee;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.product-name-item:hover {
+  background-color: #f9f9f9;
+}
+
+.product-name {
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.product-name.selected {
+  color: #1a73e8;
+  font-weight: 600;
+}
+
+/* Botón Eliminar */
+.delete-product-btn {
+  background-color: #ff4444;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  margin-left: 15px;
+  cursor: pointer;
+  float: right;
+}
+
+.delete-product-btn:hover {
+  background-color: #cc0000;
+}
+
+/* Descripción desplegable */
+.product-description-container {
+  margin-top: 8px;
+}
+
+.product-specs {
+  background: #f5f5f5;
+  padding: 10px;
+  border-radius: 4px;
+  margin-top: 5px;
+  font-size: 14px;
+}
+
+.read-more-btn {
+  background: none;
+  border: none;
+  color: #1a73e8;
+  cursor: pointer;
+  padding: 0;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+.read-more-btn:hover {
+  text-decoration: underline;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}

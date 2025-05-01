@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "name": "iPhone 15 Pro",
+    "price": 24999,
+    "category": "Apple",
+    "description": "Pantalla Super Retina XDR, chip A17 Pro, 128GB",
+    "image": "https://i.imgur.com/iphone15.jpg"
+  },
+  {
+    "id": 2,
+    "name": "Samsung Galaxy S23 Ultra",
+    "price": 22999,
+    "category": "Samsung",
+    "description": "Cámara 200MP, S Pen integrado, 256GB",
+    "image": "https://i.imgur.com/s23ultra.jpg"
+  }
+]
