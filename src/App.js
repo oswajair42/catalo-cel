@@ -4,19 +4,19 @@ import ProductForm from './components/ProductForm';
 import './App.css';
 
 function App() {
-  {/* Estado para almacenar la lista de productos */}
+  // Estado para almacenar la lista de productos
   const [products, setProducts] = useState([]);
 
-  {/* Estado para controlar la visibilidad del formulario */}
+  // Estado para controlar la visibilidad del formulario
   const [showForm, setShowForm] = useState(false);
 
-  {/* Estado para el producto seleccionado actualmente */}
+  // Estado para el producto seleccionado actualmente
   const [selectedProduct, setSelectedProduct] = useState(null);
 
-  {/* Estado para controlar qué producto está expandido */}
+  // Estado para controlar qué producto está expandido
   const [expandedProduct, setExpandedProduct] = useState(null);
 
-  {/* Efecto para cargar productos al iniciar la aplicación */}
+  // Efecto para cargar productos al iniciar la aplicación
   useEffect(() => {
     const savedProducts = localStorage.getItem('techmobile-products');
     if (savedProducts) {
@@ -28,12 +28,12 @@ function App() {
     }
   }, []);
 
-  {/* Efecto para guardar productos cuando cambian */}
+  // Efecto para guardar productos cuando cambian
   useEffect(() => {
     localStorage.setItem('techmobile-products', JSON.stringify(products));
   }, [products]);
 
-  {/* Función para agregar nuevo producto */}
+  // Función para agregar nuevo producto
   const handleAddProduct = (newProduct) => {
     const newId = products.length > 0 ? Math.max(...products.map(p => p.id)) + 1 : 1;
     
@@ -51,7 +51,7 @@ function App() {
     return true;
   };
 
-  {/* Función para eliminar producto */}
+  // Función para eliminar producto
   const handleDeleteProduct = (id) => {
     if (window.confirm('¿Estás seguro de eliminar este producto?')) {
       const updatedProducts = products.filter(product => product.id !== id);
@@ -63,7 +63,7 @@ function App() {
     }
   };
 
-  {/* Función para alternar la vista expandida */}
+  // Función para alternar la vista expandida
   const toggleExpand = (productId) => {
     setExpandedProduct(expandedProduct === productId ? null : productId);
   };
@@ -143,7 +143,7 @@ function App() {
               )}
             </div>
           ) : (
-            {/* Mensaje cuando no hay producto seleccionado */}
+            // Mensaje cuando no hay producto seleccionado
             <p className="no-products-message">Selecciona un producto para ver detalles</p>
           )}
         </div>
